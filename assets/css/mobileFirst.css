@@ -6,12 +6,13 @@
   .page-wrapper {
     transform: scale(0.67);
   }
+
   .attribution {
     width: 100%;
     transform: scale(0.8);
   }
 
   .page-wrapper {
-    height: 590px;
+    height: 630px;
   }
 }
