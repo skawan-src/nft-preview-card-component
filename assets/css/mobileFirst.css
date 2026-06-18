@@ -3,7 +3,7 @@
     height: 90%;
   }
 
-  section {
+  .page-wrapper {
     transform: scale(0.67);
   }
   .attribution {
