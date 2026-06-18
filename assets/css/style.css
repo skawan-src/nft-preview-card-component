@@ -11,13 +11,13 @@ body {
   height: 100vh;
 }
 
-.page-wrapper {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-section {
+.page-wrapper {
   display: flex;
   flex-flow: column;
   justify-content: center;
