@@ -5,15 +5,16 @@
 }
 
 body {
+  box-sizing: border-box;
   margin: 0;
   background-color: hsl(217, 54%, 11%);
+  height: 100vh;
 }
 
 .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
 }
 
 section {
@@ -23,15 +24,60 @@ section {
   align-items: center;
   background-color: hsl(216, 50%, 16%);
   width: 350px;
-  padding: 25px;
+  padding: 15px;
   border-radius: 15px;
   transform: scale(0.8);
   /* transform: translate(-50%, -50%); */
 }
 
-section > img {
+.container-imagem {
+  position: relative;
   width: 350px;
+  height: 350px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container-imagem > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 15px;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+}
+
+.img-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: background-color 0.7s ease;
+  z-index: 2;
+}
+
+.img-hover > img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.container-imagem:hover .img-hover {
+  cursor: pointer;
+  background-color: rgba(0, 255, 255, 0.199);
+}
+
+.container-imagem:hover .img-hover > img {
+  z-index: 2;
+  opacity: 1;
 }
 
 hr {
@@ -42,11 +88,21 @@ hr {
   color: hsl(0, 0%, 100%);
   font-size: 1.5em;
   font-weight: 400;
+  cursor: pointer;
+}
+
+.informacoes > p:first-of-type:hover {
+  color: hsl(178, 100%, 50%);
 }
 
 .informacoes > p:nth-child(2) {
   font-size: 1.2em;
   color: hsl(215, 51%, 70%);
+  cursor: pointer;
+}
+
+.informacoes > p:nth-child(2):hover {
+  color: hsl(178, 100%, 50%);
 }
 
 .avatar {
@@ -59,6 +115,11 @@ hr {
   margin-left: 5px;
   font-weight: 400;
   color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.avatar > strong:hover {
+  color: hsl(178, 100%, 50%);
 }
 
 .avatar > img {
@@ -98,7 +159,7 @@ p:nth-child(2) > img {
   font-weight: bolder;
   font-size: 0.6875rem;
   text-align: center;
-  width: 400px;
+  width: 289px;
   margin: auto;
 }
 
