@@ -1,0 +1,8 @@
+@media only screen and (max-width: 375px) {
+  section {
+    transform: scale(0.67);
+  }
+  .attribution {
+    transform: scale(0.8);
+  }
+}
