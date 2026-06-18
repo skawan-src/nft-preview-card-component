@@ -89,6 +89,7 @@ hr {
   font-size: 1.5em;
   font-weight: 400;
   cursor: pointer;
+  transition: color 0.5s ease;
 }
 
 .informacoes > p:first-of-type:hover {
@@ -99,6 +100,7 @@ hr {
   font-size: 1.2em;
   color: hsl(215, 51%, 70%);
   cursor: pointer;
+  transition: color 0.5s ease;
 }
 
 .informacoes > p:nth-child(2):hover {
@@ -116,6 +118,7 @@ hr {
   font-weight: 400;
   color: hsl(0, 0%, 100%);
   cursor: pointer;
+  transition: color 0.5s ease;
 }
 
 .avatar > strong:hover {
